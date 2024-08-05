@@ -12,6 +12,9 @@ function UsersList() {
         dispatch(fetchUsers());
     }, []);
     
+    const handleUserAdd = () => {
+        dispatch(addUser());
+    }
     if(isLoading) {
         return <div>Loading...</div>
     }
@@ -21,7 +24,19 @@ function UsersList() {
         return <div>Error loading data</div>
     }
 
-    return <div>{data.length}</div>
+    const renderedUsers = data.map((user) => {
+        return <div key={user.id} className="mb-2 border rounded">
+            <div>
+                {user.name}
+            </div>
+        </div>
+    })
+
+    return <div>
+        <button onClick={handleUserAdd}>+ Add User</button>
+        <h1>Users:</h1>
+        <div>{renderedUsers}</div>
+    </div>;
 }
 
 export default UsersList;
