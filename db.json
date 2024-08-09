@@ -1,5 +1,42 @@
 {
-    "users": [{"id": 1, "name": "Myra"}],
-    "albums": [],
-    "photos": []
+  "users": [
+    {
+      "id": "1",
+      "name": "Myra"
+    },
+    {
+      "name": "Elsie Price",
+      "id": "3"
+    },
+    {
+      "name": "Harold Strosin",
+      "id": "4"
+    },
+    {
+      "id": "10b1",
+      "name": "Kerry Denesik"
+    },
+    {
+      "id": "8914",
+      "name": "Nellie Gibson MD"
+    },
+    {
+      "id": "13b2",
+      "name": "Delia Bins III"
+    },
+    {
+      "id": "e469",
+      "name": "Geoffrey Prohaska"
+    },
+    {
+      "id": "0095",
+      "name": "Mr. Joseph MacGyver"
+    },
+    {
+      "id": "b98c",
+      "name": "Martin Runolfsdottir"
+    }
+  ],
+  "albums": [],
+  "photos": []
 }

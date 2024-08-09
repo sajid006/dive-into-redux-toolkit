@@ -1,42 +1,49 @@
-import {useEffect} from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchUsers } from '../store';
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { addUser, fetchUsers } from "../store";
+import Button from "./Button";
+import { useThunk } from "../hooks/useThunk";
 
 function UsersList() {
-    const dispatch = useDispatch();
-    const { isLoading, data, error } = useSelector(state => {
-        return state.users;
-    });
+  const [doFetchUsers, isLoadingUsers, loadingUsersError] =
+    useThunk(fetchUsers);
+  const [doCreateUser, isCreatingUser, creatingUserError] = useThunk(addUser);
+  const { data } = useSelector((state) => {
+    return state.users;
+  });
 
-    useEffect(() => {
-        dispatch(fetchUsers());
-    }, []);
-    
-    const handleUserAdd = () => {
-        dispatch(addUser());
-    }
-    if(isLoading) {
-        return <div>Loading...</div>
-    }
+  useEffect(() => {
+    doFetchUsers();
+  }, [doFetchUsers]);
 
-    if(error) {
-        console.log('sajid', error.message);
-        return <div>Error loading data</div>
-    }
+  const handleUserAdd = () => {
+    doCreateUser();
+  };
 
-    const renderedUsers = data.map((user) => {
-        return <div key={user.id} className="mb-2 border rounded">
-            <div>
-                {user.name}
-            </div>
+  let content;
+  if (isLoadingUsers) {
+    content = <div>Loading...</div>;
+  } else if (loadingUsersError) {
+    content = <div>Error loading data</div>;
+  } else {
+    content = data.map((user) => {
+      return (
+        <div key={user.id} className="mb-2 border rounded">
+          <div>{user.name}</div>
         </div>
-    })
+      );
+    });
+  }
 
-    return <div>
-        <button onClick={handleUserAdd}>+ Add User</button>
-        <h1>Users:</h1>
-        <div>{renderedUsers}</div>
-    </div>;
+  return (
+    <div>
+      <Button loading={isCreatingUser} onClick={handleUserAdd}>
+        + Add User
+      </Button>
+      {creatingUserError && "Error creating user..."}
+      <div>{content}</div>
+    </div>
+  );
 }
 
 export default UsersList;
