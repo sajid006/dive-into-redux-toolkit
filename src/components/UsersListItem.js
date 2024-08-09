@@ -3,6 +3,7 @@ import { useThunk } from "../hooks/useThunk";
 import { deleteUser } from "../store";
 import ExpandablePanel from "./ExpandedPanel";
 import AlbumsList from "./AlbumsList";
+import Button from "./Button";
 
 function UsersListItem({user}) {
     const [doDeleteUser, isLoading, error] = useThunk(deleteUser);

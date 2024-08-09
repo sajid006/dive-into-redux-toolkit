@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { addUser, fetchUsers } from "../store";
 import Button from "./Button";
 import { useThunk } from "../hooks/useThunk";
+import UsersListItem from './UsersListItem'
 
 function UsersList() {
   const [doFetchUsers, isLoadingUsers, loadingUsersError] =
@@ -27,11 +28,7 @@ function UsersList() {
     content = <div>Error loading data</div>;
   } else {
     content = data.map((user) => {
-      return (
-        <div key={user.id} className="mb-2 border rounded">
-          <div>{user.name}</div>
-        </div>
-      );
+      return <UsersListItem key={user.id} user={user} />;
     });
   }
 
