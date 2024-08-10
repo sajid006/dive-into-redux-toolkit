@@ -31,8 +31,28 @@
     {
       "id": "b98c",
       "name": "Martin Runolfsdottir"
+    },
+    {
+      "id": "b911",
+      "name": "Ms. Vivian Boyle"
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": "b3f0",
+      "userId": "1",
+      "title": "Ergonomic Rubber Gloves"
+    },
+    {
+      "id": "86af",
+      "userId": "1",
+      "title": "Bespoke Rubber Chicken"
+    },
+    {
+      "id": "9fd0",
+      "userId": "1",
+      "title": "Electronic Metal Gloves"
+    }
+  ],
   "photos": []
 }
