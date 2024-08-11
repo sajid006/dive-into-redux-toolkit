@@ -35,14 +35,21 @@
     {
       "id": "b911",
       "name": "Ms. Vivian Boyle"
+    },
+    {
+      "id": "05b3",
+      "name": "Pauline Osinski"
+    },
+    {
+      "id": "0274",
+      "name": "Mr. Robyn Bechtelar"
+    },
+    {
+      "id": "4ad0",
+      "name": "Daniel Hessel"
     }
   ],
   "albums": [
-    {
-      "id": "b3f0",
-      "userId": "1",
-      "title": "Ergonomic Rubber Gloves"
-    },
     {
       "id": "86af",
       "userId": "1",
@@ -52,6 +59,26 @@
       "id": "9fd0",
       "userId": "1",
       "title": "Electronic Metal Gloves"
+    },
+    {
+      "id": "e098",
+      "userId": "1",
+      "title": "Handcrafted Rubber Chicken"
+    },
+    {
+      "id": "49bf",
+      "userId": "3",
+      "title": "Elegant Steel Ball"
+    },
+    {
+      "id": "881b",
+      "userId": "3",
+      "title": "Bespoke Plastic Pants"
+    },
+    {
+      "id": "f579",
+      "userId": "1",
+      "title": "Tasty Fresh Chicken"
     }
   ],
   "photos": []
