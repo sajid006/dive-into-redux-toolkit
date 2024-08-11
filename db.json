@@ -81,5 +81,11 @@
       "title": "Tasty Fresh Chicken"
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "id": "ead1",
+      "albumId": "86af",
+      "url": "https://loremflickr.com/150/150/abstract?lock=50830"
+    }
+  ]
 }
